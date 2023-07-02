@@ -2,10 +2,11 @@
     "categories": [
       {
         "id": 1,
-        "title": "hello"
+        "title": "glasses",
+        "image": ""
       }
     ],
-    "profile": {
+    "products": {
       "name": "typicode"
     }
   }
