@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~font-awesome/css/font-awesome.min.css';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+/* @import '~ngx-owl-carousel-o/lib/styles/css/owl.carousel.css';
+@import '~ngx-owl-carousel-o/lib/styles/css/owl.theme.default.css'; */
+
+.container{
+    max-width: 1640px !important;
+}
+h1, h2, h3{
+    font-family: 'Times New Roman', Times, serif !important;
+}
+.btn-primary{
+    background-color: #9f78ff !important;
+    color: #fff;
+    border: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-primary:hover{
+    background-color: #8862e9 !important;
+
+}
+.owl-carousel .owl-nav{
+    display: none !important;
+   
+}
+.owl-carousel .owl-dots{
+    padding: 20px;
+    left: 50%;
+    position: absolute;
+    bottom: 40px;
+    transform: translateX(-50%);
+}
+.owl-carousel .owl-dots .owl-dot span{
+    background-color: #fff !important;
+    transition: .3s all ease;
+}
+.owl-carousel .owl-dots .owl-dot:hover span{
+    transform: scale(2);
+    transition: .3s all ease;
+
+
+}
+

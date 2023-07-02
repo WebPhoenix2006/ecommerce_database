@@ -1,0 +1,24 @@
+.navbar{
+    height: 90px;
+}
+.navbar-nav .nav-link a{
+    text-transform: uppercase;
+    transition: .3s all ease;
+}
+.navbar-nav .nav-link a:hover, .navbar-nav .search:hover{
+    color: #9f78ff !important;
+    transition: .3s all ease;
+    cursor: pointer;
+}
+.navbar-nav .cart{
+    border-radius: 20px;
+    padding: 10px 20px !important;
+}
+.navbar-nav .search{
+    padding: 10px 15.5px !important;
+    border-radius: 100% !important; 
+}
+.navbar-nav .cart span{
+    right: 0;
+    border-radius: 20px;
+}

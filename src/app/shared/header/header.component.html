@@ -1,1 +1,27 @@
-<p>header works!</p>
+<header>
+    <nav
+        class="navbar navbar-expand navbar-light sticky-top px-0 d-flex align-items-center justify-content-between">
+        <div class="container">
+                <a routerLink="/" class="navbar-brand">
+                    <img src="assets/img/logo/logo.png" alt="logo">
+                </a>
+                <ul class="navbar-nav float-left d-flex align-items-center ">
+                    <li class="nav-link">
+                        <a routerLink="/">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a routerLink="/">Shop</a>
+                    </li>
+                    <li class="nav-link">
+                        <a routerLink="/">About</a>
+                    </li>
+                    <li class="nav-link">
+                        <a routerLink="/">Contact</a>
+                    </li>
+                    <a routerLink="/" class="search py-2 rounded-circle mx-3 px-3 text-dark bg-light "><i class="fa fa-search"></i></a>
+                    <a routerLink="/" class="btn btn-sm btn-primary cart position-relative py-2"><i class="fa fa-shopping-cart"></i>
+                    <span class="badge bg-danger position-absolute">0</span></a>
+                </ul>
+        </div>
+    </nav>
+</header>

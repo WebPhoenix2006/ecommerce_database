@@ -1,1 +1,74 @@
-<p>home works!</p>
+<header>
+    <app-header></app-header>
+
+</header>
+<div class="container">
+    <div class="hero">
+        <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide>
+                <img src="assets/img/hero/h1_hero1.png" alt="h1_hero" class="img-fluid">
+                <div class="hero-text">
+                    <h1>fashion changing anyways</h1>
+                    <button class="btn btn-primary">Shop Now</button>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <img src="assets/img/hero/h1_hero2.png" alt="h1_hero" class="img-fluid">
+                <div class="hero-text">
+                    <h1>fashion changing anyways</h1>
+                    <button class="btn btn-primary">Shop Now</button>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <img src="assets/img/hero/h1_hero3.png" alt="h1_hero" class="img-fluid">
+                <div class="hero-text">
+                    <h1>fashion changing anyways</h1>
+                    <button class="btn btn-primary">Shop Now</button>
+                </div>
+            </ng-template>
+        </owl-carousel-o>
+    </div>
+    <div class="categories py-5">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let item of cat_images">
+                <div class="cat">
+
+                    <img src="{{item.img_src}}" alt="Glasses" class="img-fluid">
+                    <button class="btn btn-primary m-auto">Shop Now</button>
+                    <div class="tag p-4">
+                        <h2 class="text-center">{{item.tag}}</h2>
+
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-md-3">
+                <img src="assets/img/gallery/popular2.png" alt="Glasses" class="img-fluid">
+            </div>
+            <div class="col-md-3">
+                <img src="assets/img/gallery/popular3.png" alt="Glasses" class="img-fluid">
+            </div>
+            <div class="col-md-3">
+                <img src="assets/img/gallery/popular4.png" alt="Glasses" class="img-fluid">
+            </div> -->
+        </div>
+    </div>
+    <div class="new-arivals p-4">
+        <h2>new <br> arivals</h2>
+        <div class="container px-5">
+            <div class="row">
+                <div class="col-md-3 mb-5" *ngFor="let item of products">
+                    <div class="products">
+                        <img src="{{item.img_src}}" alt="arrival1" class="img-fluid m-auto">
+                        <div class="description p-3 text-center">
+                            <a routerLink="/" class="">{{item.title}}</a>
+                            <div class="rating">
+                                <i class="i.fa.fa-star"></i>
+                            </div>
+                            <p>{{item.price}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
