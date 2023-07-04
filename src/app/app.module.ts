@@ -9,6 +9,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Router, RouterModule } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
+import { EmailFormComponent } from './shared/email-form/email-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -18,6 +20,7 @@ import { AboutComponent } from './components/about/about.component';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
+    EmailFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +29,7 @@ import { AboutComponent } from './components/about/about.component';
     RouterModule.forRoot([
       
     ]),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

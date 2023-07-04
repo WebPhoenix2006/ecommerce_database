@@ -1,36 +1,41 @@
 <header>
     <app-header></app-header>
-
 </header>
 <div class="container">
     <div class="hero">
         <owl-carousel-o [options]="customOptions">
             <ng-template carouselSlide>
-                <img src="assets/img/hero/h1_hero1.png" alt="h1_hero" class="img-fluid">
-                <div class="hero-text">
-                    <h1>fashion changing anyways</h1>
-                    <button class="btn btn-primary">Shop Now</button>
+                <!-- <img src="assets/img/hero/h1_hero1.png" alt="h1_hero" class="img-fluid"> -->
+                <div class="slide1">
+                    <div class="hero-text">
+                        <h1 class="">fashion changing anyways</h1>
+                        <button class="btn btn-primary">Shop Now</button>
+                    </div>
                 </div>
             </ng-template>
             <ng-template carouselSlide>
-                <img src="assets/img/hero/h1_hero2.png" alt="h1_hero" class="img-fluid">
-                <div class="hero-text">
-                    <h1>fashion changing anyways</h1>
-                    <button class="btn btn-primary">Shop Now</button>
+                <!-- <img src="assets/img/hero/h1_hero2.png" alt="h1_hero" class="img-fluid"> -->
+                <div class="slide2">
+                    <div class="hero-text">
+                        <h1>fashion changing anyways</h1>
+                        <button class="btn btn-primary">Shop Now</button>
+                    </div>
                 </div>
             </ng-template>
             <ng-template carouselSlide>
-                <img src="assets/img/hero/h1_hero3.png" alt="h1_hero" class="img-fluid">
-                <div class="hero-text">
-                    <h1>fashion changing anyways</h1>
-                    <button class="btn btn-primary">Shop Now</button>
+                <!-- <img src="assets/img/hero/h1_hero3.png" alt="h1_hero" class="img-fluid"> -->
+                <div class="slide3">
+                    <div class="hero-text">
+                        <h1>fashion changing anyways</h1>
+                        <button class="btn btn-primary">Shop Now</button>
+                    </div>
                 </div>
             </ng-template>
         </owl-carousel-o>
     </div>
     <div class="categories py-5">
         <div class="row">
-            <div class="col-md-3" *ngFor="let item of cat_images">
+            <div class="col-md-3 mb-5" *ngFor="let item of cat_images">
                 <div class="cat">
 
                     <img src="{{item.img_src}}" alt="Glasses" class="img-fluid">
@@ -52,9 +57,9 @@
             </div> -->
         </div>
     </div>
-    <div class="new-arivals p-4">
+    <div class="new-arivals py-4">
         <h2>new <br> arivals</h2>
-        <div class="container px-5">
+        <div class="container">
             <div class="row">
                 <div class="col-md-3 mb-5" *ngFor="let item of products">
                     <div class="products">
@@ -66,6 +71,67 @@
                             </div>
                             <p>{{item.price}}</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-outline-primary m-auto">Browse More</button>
+        </div>
+    </div>
+    <div class="collection-house">
+        <div class="text">
+            <!-- <div class="container"> -->
+            <h2>
+                collection houses <br> our first-ever
+            </h2>
+            <button class="btn btn-primary">About Us</button>
+        </div>
+        <!-- </div> -->
+    </div>
+    <div class="features bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="assets/img/icon/services1.svg" alt="services1" class="img-fluid mb-4">
+                    <div class="text">
+                        <h4>
+                            Fast & Free Delivery    
+                        </h4>
+                        <p>
+                            Free delivery on all orders
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <img src="assets/img/icon/services2.svg" alt="services1" class="img-fluid mb-4">
+                    <div class="text">
+                        <h4>
+                            Fast & Free Delivery    
+                        </h4>
+                        <p>
+                            Free delivery on all orders
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <img src="assets/img/icon/services3.svg" alt="services1" class="img-fluid mb-4">
+                    <div class="text">
+                        <h4>
+                            Fast & Free Delivery    
+                        </h4>
+                        <p>
+                            Free delivery on all orders
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <img src="assets/img/icon/services4.svg" alt="services1" class="img-fluid mb-4">
+                    <div class="text">
+                        <h4>
+                            Fast & Free Delivery    
+                        </h4>
+                        <p>
+                            Free delivery on all orders
+                        </p>
                     </div>
                 </div>
             </div>

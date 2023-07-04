@@ -1,49 +1,102 @@
-.hero .owl-nav .owl-prev, .hero .owl-nav .owl-next{
+.hero .owl-nav .owl-prev,
+.hero .owl-nav .owl-next {
     display: none !important;
 }
 
-.hero img{
+.hero img {
     position: relative;
     height: 830px;
 
 }
-.hero .hero-text{
+
+.hero {
+    overflow: hidden;
+}
+
+.hero .slide1 {
+    background-image: url('/assets/img/hero/h1_hero1.png');
+    background-size: cover;
+    /* background-position: center bottom; */
+    height: 900px;
+    background-repeat: no-repeat;
+}
+
+.hero .slide2 {
+    background-image: url('/assets/img/hero/h1_hero2.png');
+    background-size: cover;
+    /* background-position: center top; */
+    background-repeat: no-repeat;
+
+    height: 900px;
+}
+
+.hero .slide3 {
+    background-image: url('/assets/img/hero/h1_hero3.png');
+    background-size: cover;
+    /* background-position: center top; */
+    background-repeat: no-repeat;
+
+    height: 900px;
+}
+
+@media screen and (max-width: 500px) {
+    .hero .hero-text h1 {
+        font-size: 60px;
+    }
+
+    .hero .slide1,
+    .hero .slide2,
+    .hero .slide3 {
+        height: 400px;
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+}
+
+.hero .hero-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
     color: #fff;
 }
-.hero .hero-text h1{
-    font-size: 120px ;
+
+.hero .hero-text h1 {
+    font-size: 120px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     /* max-width: 300px; */
     margin-bottom: 20px;
     font-weight: bold;
 }
-.hero .hero-text button{
+
+.hero .hero-text button {
     padding: 15px 45px;
     border-radius: 5px !important;
     margin: 10px auto !important;
 }
-.categories  .cat{
+
+.categories .cat {
     position: relative;
     height: 490.61px;
 }
-.categories .cat:hover .tag{
+
+.categories .cat:hover .tag {
     transition: all 2s ease-in-out;
     visibility: visible;
 }
-.categories .tag{
+
+.categories .tag {
     background-color: #0000004a;
     color: #fff;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    transition: all 2s  ease-in-out;
+    transition: all 2s ease-in-out;
 }
+
 .categories .cat button {
     padding: 15px 30px;
     position: absolute;
@@ -54,49 +107,92 @@
     visibility: hidden;
     transition: .2s ease all;
 }
-.categories .cat:hover button{
+
+.categories .cat:hover button {
     visibility: visible;
     transform: translateY(-50%) translateX(-50%);
     transition: .2s all ease;
 }
-.new-arivals h2{
+
+.new-arivals h2 {
     font-size: 80px;
     text-align: center;
 }
-.new-arivals .container{
+
+.new-arivals .container {
     max-width: 1400px !important;
 }
-.new-arivals .products{
+
+.new-arivals .products {
     border: .5px solid #f7f7f7;
 }
-.new-arivals .products img{
+
+.new-arivals .products img {
     width: 100%;
 }
-.new-arivals .products:hover{
+
+.new-arivals .products:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: all .3s ease;
     cursor: pointer;
 }
-.new-arivals .products:hover a{
-    text-decoration: underline !important;
+
+.new-arivals .products:hover a {
+    text-decoration: underlined !important;
 
 }
-.new-arivals .products a{
+
+.new-arivals .products a {
     font-size: 25px !important;
     margin-bottom: 10px;
-    text-decoration:  none;
+    text-decoration: none;
 
 }
-.new-arivals .products p{
+
+.new-arivals .products p {
     font-size: 22px;
     margin-bottom: 10px;
 }
-.new-arivals .products a:hover{
+
+.new-arivals .products a:hover {
     cursor: pointer;
     text-decoration: underline !important;
 }
-.new-arivals .products i{
+
+.new-arivals .products i {
     font-size: 20px;
     margin-right: 10px;
     margin-bottom: 10px;
+}
+
+.collection-house {
+    height: 800px;
+    background-image: url('/assets/img/gallery/section_bg01.png');
+    background-size: cover;
+    background-position: center top;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.collection-house .text {
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #1d254766;
+}
+
+.collection-house .text h2 {
+    font-size: 80px !important;
+}
+.features{
+    padding: 140px 20px 130px 20px;
 }
