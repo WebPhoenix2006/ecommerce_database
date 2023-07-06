@@ -60,7 +60,7 @@ export class HomeComponent {
   ];
   cartItems: CartItem[] = [];
   totalPrice: string = '$0.00';
-  private jsonServerUrl = 'https://my-json-server.typicode.com/WebPhoenix2006/shionhouse-db/cartItems'; // Change this URL to your JSON server endpoint
+  private jsonServerUrl = 'https://shionhouse-backend-sam.onrender.com/cart'; // Change this URL to your JSON server endpoint
 
   constructor(private http: HttpClient) { }
 

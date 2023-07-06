@@ -36,7 +36,7 @@ export class ShopComponent implements OnInit {
   ];
   cartItems: CartItem[] = [];
   totalPrice: string = '$0.00';
-  private jsonServerUrl = 'https://my-json-server.typicode.com/WebPhoenix2006/shionhouse-db/cartItems'; // Change this URL to your JSON server endpoint
+  private jsonServerUrl = 'https://shionhouse-backend-sam.onrender.com/cart'; // Change this URL to your JSON server endpoint
 
   constructor(private http: HttpClient) { }
 
@@ -59,12 +59,12 @@ export class ShopComponent implements OnInit {
 
   addToCart(selectedItem: CartItem | null): void {
     if (selectedItem) {
-      const existingItem = this.cartItems.find(item => item.title === selectedItem.title);
-
+      const existingItem = this.cartItems.find(item => item.id === selectedItem.id);
+  
       if (existingItem) {
         // Item already exists in the cart, update the quantity
         existingItem.quantity += 1;
-
+  
         // Update the cart item on the JSON server
         this.http.put<CartItem>(`${this.jsonServerUrl}/${existingItem.id}`, existingItem)
           .subscribe(
@@ -78,19 +78,18 @@ export class ShopComponent implements OnInit {
           );
       } else {
         // Item doesn't exist in the cart, add it as a new item with quantity 1
-        const newId = this.generateUniqueId();
         const newItem: CartItem = {
-          id: newId,
+          id: selectedItem.id,
           title: selectedItem.title,
           price: selectedItem.price,
           img_src: selectedItem.img_src,
           quantity: 1
         };
         this.cartItems.push(newItem);
-
+  
         // Recalculate the total price
         this.calculateTotalPrice();
-
+  
         // Add the new item to the JSON server
         this.http.post<CartItem>(this.jsonServerUrl, newItem)
           .subscribe(
@@ -105,6 +104,12 @@ export class ShopComponent implements OnInit {
       }
     }
   }
+  
+  
+  
+  
+
+  
 
   removeFromCart(item: CartItem): void {
     const itemIndex = this.cartItems.findIndex(cartItem => cartItem.id === item.id);
@@ -115,27 +120,39 @@ export class ShopComponent implements OnInit {
       if (currentItem.quantity > 1) {
         // Decrease the quantity by 1
         currentItem.quantity -= 1;
+  
+        // Update the cart item on the JSON server
+        this.http.put<CartItem>(`${this.jsonServerUrl}/${item.id}`, currentItem)
+          .subscribe(
+            () => {
+              // Display a success message
+              alert('Item quantity updated successfully!');
+            },
+            (error) => {
+              console.error('Error updating item quantity:', error);
+            }
+          );
       } else {
         // Remove the item from the cartItems array if the quantity is 1
+        this.http.delete(`${this.jsonServerUrl}/${item.id}`)
+          .subscribe(
+            () => {
+              // Display a success message
+              alert('Item removed from cart successfully!');
+            },
+            (error) => {
+              console.error('Error removing item from cart:', error);
+            }
+          );
+  
         this.cartItems.splice(itemIndex, 1);
       }
   
       // Recalculate the total price
       this.calculateTotalPrice();
-  
-      // Update the cart item on the JSON server
-      this.http.put<CartItem>(`${this.jsonServerUrl}/${item.id}`, currentItem)
-        .subscribe(
-          () => {
-            // Display a success message
-            alert('Item quantity updated successfully!');
-          },
-          (error) => {
-            console.error('Error updating item quantity:', error);
-          }
-        );
     }
   }
+  
   
 
   generateUniqueId(): number {

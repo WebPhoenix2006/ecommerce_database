@@ -19,7 +19,7 @@ interface CartItem {
 export class CartComponent implements OnInit, OnDestroy {
   cartItems: CartItem[] = [];
   private refreshSubscription: Subscription;
-  private readonly jsonServerUrl = 'https://my-json-server.typicode.com/WebPhoenix2006/shionhouse-db/cartItems';
+  private readonly jsonServerUrl = 'https://shionhouse-backend-sam.onrender.com/cart';
 
   constructor(private http: HttpClient) {}
 
@@ -63,6 +63,8 @@ export class CartComponent implements OnInit, OnDestroy {
         }
       );
   }
+  
+  
 
   decreaseQuantity(item: CartItem): void {
     if (item.quantity > 1) {

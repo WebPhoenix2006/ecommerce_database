@@ -9,48 +9,5 @@
   "products": {
     "name": "typicode"
   },
-  "cartItems": [
-    {
-      "id": 6058,
-      "title": "Knitted Jumper",
-      "price": "30.00",
-      "img_src": "assets/img/gallery/arrival1.png",
-      "quantity": 3
-    },
-    {
-      "id": 2631,
-      "title": "Cool Scarf",
-      "price": "30.00",
-      "img_src": "assets/img/gallery/arrival2.png",
-      "quantity": 3
-    },
-    {
-      "id": 3115,
-      "title": "Nice Shirt",
-      "price": "30.00",
-      "img_src": "assets/img/gallery/arrival3.png",
-      "quantity": 1
-    },
-    {
-      "id": 6147,
-      "title": "Cool Sneakers",
-      "price": "30.00",
-      "img_src": "assets/img/gallery/arrival8.png",
-      "quantity": 2
-    },
-    {
-      "id": 5851,
-      "title": "Nice Top",
-      "price": "30.00",
-      "img_src": "assets/img/gallery/arrival7.png",
-      "quantity": 1
-    },
-    {
-      "id": 480,
-      "title": "Nice Glasses",
-      "price": "30.00",
-      "img_src": "assets/img/gallery/arrival6.png",
-      "quantity": 1
-    }
-  ]
+  "cartItems": []
 }

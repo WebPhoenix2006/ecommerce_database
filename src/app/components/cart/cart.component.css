@@ -49,22 +49,24 @@
     cursor: pointer;
   }
   .cartSidePar {
-    width: 300px;
+    width: 320px;
     height: 100vh;
     position: fixed;
-    right: -300px;
+    right: -325px;
     top: 0;
     background-color: #1d2547df !important;
     transition: right 0.3s ease-in-out;
     z-index: 9999;
     color: #fff;
     overflow-y: auto;
+    overflow-x: hidden;
   }
   .cartSidePar.open{
     right: 0;    
   }
   .cartSide{
     overflow-y: auto;
+    overflow-x: hidden;
   }
   .cartSide .title{
     display: flex;
