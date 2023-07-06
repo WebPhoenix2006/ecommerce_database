@@ -1,0 +1,13 @@
+.add-alert{
+    position: absolute;
+    top: -100px;
+    z-index: 9999;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .3s ease;
+
+}
+.add-alert.active{
+    top: 50px;
+    transition: all .3s ease;
+}

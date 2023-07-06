@@ -1,27 +1,56 @@
-<header>
-    <nav
-        class="navbar navbar-expand navbar-light sticky-top px-0 d-flex align-items-center justify-content-between">
-        <div class="container">
-                <a routerLink="/" class="navbar-brand">
-                    <img src="assets/img/logo/logo.png" alt="logo">
-                </a>
-                <ul class="navbar-nav float-left d-flex align-items-center ">
-                    <li class="nav-link">
-                        <a routerLink="/">Home</a>
-                    </li>
-                    <li class="nav-link">
-                        <a routerLink="/">Shop</a>
-                    </li>
-                    <li class="nav-link">
-                        <a routerLink="/">About</a>
-                    </li>
-                    <li class="nav-link">
-                        <a routerLink="/">Contact</a>
-                    </li>
-                    <a routerLink="/" class="search py-2 rounded-circle mx-3 px-3 text-dark bg-light "><i class="fa fa-search"></i></a>
-                    <a routerLink="/" class="btn btn-sm btn-primary cart position-relative py-2"><i class="fa fa-shopping-cart"></i>
-                    <span class="badge bg-danger position-absolute">0</span></a>
-                </ul>
-        </div>
+<header [ngClass]="{'sticky': isSticky}">
+    <nav class="navbar navbar-expand navbar-light sticky-top px-0 d-flex align-items-center justify-content-between">
+      <div class="container">
+        <a routerLink="/" class="navbar-brand">
+          <img src="assets/img/logo/logo.png" alt="logo">
+        </a>
+        <ul class="navbar-nav float-left d-flex align-items-center">
+          <li class="nav-link">
+            <a routerLink="/">Home</a>
+          </li>
+          <li class="nav-link">
+            <a routerLink="/shop">Shop</a>
+          </li>
+          <li class="nav-link">
+            <a routerLink="/">About</a>
+          </li>
+          <li class="nav-link">
+            <a routerLink="/">Contact</a>
+          </li>
+          <a routerLink="/" class="search py-2 rounded-circle mx-3 px-3 text-dark bg-light"><i class="fa fa-search"></i></a>
+          <a (click)="toggleCartSide()" class="btn btn-sm btn-primary cart position-relative py-2"><i class="fa fa-shopping-cart"></i></a>
+          <button class="menu-toggler text-dark p-3" (click)="toggleSidebar()"><i class="fa fa-bars"></i></button>
+        </ul>
+      </div>
     </nav>
-</header>
+    <div class="sidebarPar" [class.active]="isSidebarActive">
+      <div class="closer ms-auto p-3">
+        <i class="fa fa-times fs-2 text-white" (click)="closeSidebar()"></i>
+      </div>
+      <ul class="list-unstyled w-100">
+        <li>
+          <a routerLink="/">Home</a>
+        </li>
+        <li>
+          <a routerLink="/">About</a>
+        </li>
+        <li>
+          <a routerLink="/">Contact</a>
+        </li>
+        <li>
+          <a routerLink="/shop">Shop</a>
+        </li>
+        <li>
+          <a (click)="toggleCartSide()">Cart</a>
+        </li>
+        <li>
+          <a routerLink="/">My Account</a>
+        </li>
+        <li>
+          <form>
+            <input type="text" placeholder="Type something and press the enter key..." class="form-control border-0 rounded-0 py-3 bg-none">
+          </form>
+        </li>
+      </ul>
+    </div>
+  </header> 

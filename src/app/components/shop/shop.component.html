@@ -1,0 +1,142 @@
+<app-header (openSidebar)="cartSidePar.open()"></app-header>
+<app-cart #cartSidePar (closeSidebarEvent)="cartSidePar.closeSidebar()"></app-cart>
+<app-add-alert></app-add-alert>
+<div class="container">
+    <div class="main">
+        <div class="welcome-text">
+            <h1>
+                Shop with us
+            </h1>
+            <p class="fs-5">
+                Browse from 230 latest items
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <select name="" id="" class="form-select mb-4">
+                    <option value="1" class="form-control" selected>Category</option>
+                    <option value="2" class="form-control">Shirt</option>
+                    <option value="3" class="form-control">T-Shirt</option>
+                    <option value="4" class="form-control">Pant</option>
+                    <option value="5" class="form-control">Dress</option>
+                </select>
+                <select name="" id="" class="form-select mb-4">
+                    <option value="1" class="form-control" selected>Type</option>
+                    <option value="2" class="form-control">SM</option>
+                    <option value="3" class="form-control">LG</option>
+                    <option value="4" class="form-control">XL</option>
+                    <option value="5" class="form-control">XXL</option>
+                </select>
+                <select name="" id="" class="form-select mb-4">
+                    <option value="1" class="form-control" selected>Size</option>
+                    <option value="2" class="form-control">1.2ft</option>
+                    <option value="3" class="form-control">2.5ft</option>
+                    <option value="4" class="form-control">5.2ft</option>
+                    <option value="5" class="form-control">3.2ft</option>
+                </select>
+                <select name="" id="" class="form-select mb-4">
+                    <option value="1" class="form-control" selected>Color</option>
+                    <option value="2" class="form-control">White</option>
+                    <option value="3" class="form-control">Green</option>
+                    <option value="4" class="form-control">Blue</option>
+                    <option value="5" class="form-control">Sky Blue</option>
+                </select>
+                <select name="" id="" class="form-select mb-4">
+                    <option value="1" class="form-control" selected>Price range</option>
+                    <option value="2" class="form-control">$10 to $20</option>
+                    <option value="3" class="form-control">$20-$30</option>
+                    <option value="4" class="form-control">$50 to $80</option>
+                    <option value="5" class="form-control">$100 to $120</option>
+                </select>
+            </div>
+            <div class="col-md-9">
+                <div class="row new-arivals">
+                    <div class="col-md-6 col-lg-4 mb-5 fadeInUp" *ngFor="let item of products">
+                        <div class="products">
+                            <div class="add-to-cart">
+                                <img src="assets/img/gallery/favorit-card.png" alt="add to cart" class="img-fluid" (click)="addToCart(item)">
+                            </div>
+                            <img [src]="item.img_src" alt="arrival1" class="img-fluid m-auto">
+                            <div class="description p-3 text-center">
+                                <a routerLink="/" class="">{{item.title}}</a>
+                                <div class="rating">
+                                    <i class="i.fa.fa-star"></i>
+                                </div>
+                                <p>${{item.price}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-outline-primary m-auto px-3 py-2">Load More</button>
+            </div>
+        </div>
+        <div class="categories py-5">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-5" *ngFor="let item of cat_images">
+                    <div class="cat">
+
+                        <img src="{{item.img_src}}" alt="Glasses" class="img-fluid">
+                        <button class="btn btn-primary m-auto">Shop Now</button>
+                        <div class="tag p-4">
+                            <h2 class="text-center">{{item.tag}}</h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="features bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <img src="assets/img/icon/services1.svg" alt="services1" class="img-fluid mb-4">
+                    <div class="text">
+                        <h4>
+                            Fast & Free Delivery
+                        </h4>
+                        <p>
+                            Free delivery on all orders
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <img src="assets/img/icon/services2.svg" alt="services1" class="img-fluid mb-4">
+                    <div class="text">
+                        <h4>
+                            Fast & Free Delivery
+                        </h4>
+                        <p>
+                            Free delivery on all orders
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <img src="assets/img/icon/services3.svg" alt="services1" class="img-fluid mb-4">
+                    <div class="text">
+                        <h4>
+                            Fast & Free Delivery
+                        </h4>
+                        <p>
+                            Free delivery on all orders
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <img src="assets/img/icon/services4.svg" alt="services1" class="img-fluid mb-4">
+                    <div class="text">
+                        <h4>
+                            Fast & Free Delivery
+                        </h4>
+                        <p>
+                            Free delivery on all orders
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-footer></app-footer>

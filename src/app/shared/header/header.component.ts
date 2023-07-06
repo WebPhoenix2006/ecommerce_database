@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  isSticky: boolean = false;
+  isSidebarActive: boolean = false;
 
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    this.isSticky = window.pageYOffset >= 80; // Adjust the scroll position threshold as needed
+  }
+  @Output() openSidebar: EventEmitter<void> = new EventEmitter<void>();
+
+
+  toggleSidebar() {
+    this.isSidebarActive = !this.isSidebarActive;
+  }
+
+  closeSidebar() {
+    this.isSidebarActive = false;
+  }
+  toggleCartSide() {
+    this.openSidebar.emit();
+  }
 }

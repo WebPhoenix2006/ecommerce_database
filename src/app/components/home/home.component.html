@@ -1,7 +1,5 @@
-<header>
-    <app-header></app-header>
-</header>
-<div class="container">
+<app-header (openSidebar)="cartSidePar.open()"></app-header>
+<app-cart #cartSidePar (closeSidebarEvent)="cartSidePar.closeSidebar()"></app-cart><div class="container">
     <div class="hero">
         <owl-carousel-o [options]="customOptions">
             <ng-template carouselSlide>
@@ -9,7 +7,7 @@
                 <div class="slide1">
                     <div class="hero-text">
                         <h1 class="">fashion changing anyways</h1>
-                        <button class="btn btn-primary">Shop Now</button>
+                        <button routerLink="/shop" class="btn btn-primary">Shop Now</button>
                     </div>
                 </div>
             </ng-template>
@@ -18,7 +16,7 @@
                 <div class="slide2">
                     <div class="hero-text">
                         <h1>fashion changing anyways</h1>
-                        <button class="btn btn-primary">Shop Now</button>
+                        <button routerLink="/shop" class="btn btn-primary">Shop Now</button>
                     </div>
                 </div>
             </ng-template>
@@ -27,7 +25,7 @@
                 <div class="slide3">
                     <div class="hero-text">
                         <h1>fashion changing anyways</h1>
-                        <button class="btn btn-primary">Shop Now</button>
+                        <button routerLink="/shop" class="btn btn-primary">Shop Now</button>
                     </div>
                 </div>
             </ng-template>
@@ -35,7 +33,7 @@
     </div>
     <div class="categories py-5">
         <div class="row">
-            <div class="col-md-3 mb-5" *ngFor="let item of cat_images">
+            <div class="col-md-6 col-lg-3 mb-5" *ngFor="let item of cat_images">
                 <div class="cat">
 
                     <img src="{{item.img_src}}" alt="Glasses" class="img-fluid">
@@ -46,35 +44,29 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="col-md-3">
-                <img src="assets/img/gallery/popular2.png" alt="Glasses" class="img-fluid">
-            </div>
-            <div class="col-md-3">
-                <img src="assets/img/gallery/popular3.png" alt="Glasses" class="img-fluid">
-            </div>
-            <div class="col-md-3">
-                <img src="assets/img/gallery/popular4.png" alt="Glasses" class="img-fluid">
-            </div> -->
         </div>
     </div>
     <div class="new-arivals py-4">
         <h2>new <br> arivals</h2>
         <div class="container">
             <div class="row">
-                <div class="col-md-3 mb-5" *ngFor="let item of products">
+                <div class="col-md-6 col-lg-3 mb-5 fadeInUp" *ngFor="let item of products">
                     <div class="products">
+                        <div class="add-to-cart">
+                            <img src="assets/img/gallery/favorit-card.png" alt="add to cart" (click)="addToCart(item)" class="img-fluid">
+                        </div>
                         <img src="{{item.img_src}}" alt="arrival1" class="img-fluid m-auto">
                         <div class="description p-3 text-center">
                             <a routerLink="/" class="">{{item.title}}</a>
                             <div class="rating">
                                 <i class="i.fa.fa-star"></i>
                             </div>
-                            <p>{{item.price}}</p>
+                            <p>${{item.price}}</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="btn btn-outline-primary m-auto">Browse More</button>
+            <button routerLink="/shop" class="btn btn-outline-primary m-auto mb-5">Browse More</button>
         </div>
     </div>
     <div class="collection-house">
@@ -90,44 +82,44 @@
     <div class="features bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-6 col-lg-3 mb-3">
                     <img src="assets/img/icon/services1.svg" alt="services1" class="img-fluid mb-4">
                     <div class="text">
                         <h4>
-                            Fast & Free Delivery    
+                            Fast & Free Delivery
                         </h4>
                         <p>
                             Free delivery on all orders
                         </p>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-6 col-lg-3 mb-3">
                     <img src="assets/img/icon/services2.svg" alt="services1" class="img-fluid mb-4">
                     <div class="text">
                         <h4>
-                            Fast & Free Delivery    
+                            Fast & Free Delivery
                         </h4>
                         <p>
                             Free delivery on all orders
                         </p>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-6 col-lg-3 mb-3">
                     <img src="assets/img/icon/services3.svg" alt="services1" class="img-fluid mb-4">
                     <div class="text">
                         <h4>
-                            Fast & Free Delivery    
+                            Fast & Free Delivery
                         </h4>
                         <p>
                             Free delivery on all orders
                         </p>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-6 col-lg-3 mb-3">
                     <img src="assets/img/icon/services4.svg" alt="services1" class="img-fluid mb-4">
                     <div class="text">
                         <h4>
-                            Fast & Free Delivery    
+                            Fast & Free Delivery
                         </h4>
                         <p>
                             Free delivery on all orders
@@ -138,3 +130,4 @@
         </div>
     </div>
 </div>
+<app-footer></app-footer>

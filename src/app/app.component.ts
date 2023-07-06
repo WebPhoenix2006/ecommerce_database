@@ -7,6 +7,6 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'shiohouse';
+  title = 'shionhouse';
  
 }

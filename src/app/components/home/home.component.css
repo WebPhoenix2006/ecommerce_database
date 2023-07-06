@@ -39,9 +39,9 @@
     height: 900px;
 }
 
-@media screen and (max-width: 500px) {
+@media (max-width: 500px) {
     .hero .hero-text h1 {
-        font-size: 60px;
+        font-size: 60px !important;
     }
 
     .hero .slide1,
@@ -79,7 +79,7 @@
 
 .categories .cat {
     position: relative;
-    height: 490.61px;
+    /* height: 490.61px !important; */
 }
 
 .categories .cat:hover .tag {
@@ -98,7 +98,6 @@
 }
 
 .categories .cat button {
-    padding: 15px 30px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -110,7 +109,7 @@
 
 .categories .cat:hover button {
     visibility: visible;
-    transform: translateY(-50%) translateX(-50%);
+    /* transform: translateY(-50%) translateX(-50%); */
     transition: .2s all ease;
 }
 
@@ -122,9 +121,23 @@
 .new-arivals .container {
     max-width: 1400px !important;
 }
-
 .new-arivals .products {
     border: .5px solid #f7f7f7;
+    position: relative;
+}
+.new-arivals .add-to-cart img{
+    width: 40px !important;
+    position: absolute;
+    /* padding: 10px; */
+    border-radius: 100%;
+    right: 10px;
+    top: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.new-arivals .add-to-cart img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all .3s ease;
 }
 
 .new-arivals .products img {
@@ -192,6 +205,19 @@
 
 .collection-house .text h2 {
     font-size: 80px !important;
+}
+@media screen, (max-width: 720px) {
+    .collection-house .text h2{
+        font-size: 60px !important;
+    }
+}
+@media screen, (max-width: 520px) {
+    .collection-house .text h2{
+        font-size: 40px !important;
+    }
+    .collection-house {
+        height: 450px;
+    }
 }
 .features{
     padding: 140px 20px 130px 20px;

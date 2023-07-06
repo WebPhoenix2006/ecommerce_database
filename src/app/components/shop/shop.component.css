@@ -1,0 +1,110 @@
+.welcome-text h1{
+    font-size: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.container .main{
+    padding: 100px 0;
+    max-width: 1200px !important;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.new-arivals .products {
+    border: .5px solid #f7f7f7;
+    position: relative;
+}
+.new-arivals .add-to-cart img{
+    width: 40px !important;
+    position: absolute;
+    /* padding: 10px; */
+    border-radius: 100%;
+    right: 10px;
+    top: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.new-arivals .add-to-cart img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all .3s ease;
+}
+
+.new-arivals .products img {
+    width: 100%;
+}
+
+.new-arivals .products:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.new-arivals .products:hover a {
+    text-decoration: underlined !important;
+
+}
+
+.new-arivals .products a {
+    font-size: 25px !important;
+    margin-bottom: 10px;
+    text-decoration: none;
+
+}
+
+.new-arivals .products p {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.new-arivals .products a:hover {
+    cursor: pointer;
+    text-decoration: underline !important;
+}
+
+.new-arivals .products i {
+    font-size: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.categories .cat {
+    position: relative;
+    /* height: 490.61px !important; */
+}
+
+.categories .cat:hover .tag {
+    transition: all 2s ease-in-out;
+    visibility: visible;
+}
+
+.categories .tag {
+    background-color: #0000004a;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 2s ease-in-out;
+}
+
+.categories .cat button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-90%) translateX(-50%);
+    margin: auto;
+    visibility: hidden;
+    transition: .2s ease all;
+}
+
+.categories .cat:hover button {
+    visibility: visible;
+    /* transform: translateY(-50%) translateX(-50%); */
+    transition: .2s all ease;
+}
+.features{
+    padding: 140px 20px 130px 20px;
+}
+.cart-sidebar {
+    display: none;
+    /* Add other styles for the cart sidebar */
+  }

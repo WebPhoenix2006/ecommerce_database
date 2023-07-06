@@ -1,0 +1,32 @@
+footer {
+    background-color: #1D2547 !important;
+    padding-left: 100px;
+    /* padding-right: 100px !important; */
+    padding-top: 105px;
+    padding-bottom: 50px;color: #fff;
+}
+@media screen, (max-width: 720px) {
+    footer{
+        padding: 50px 0 0 10px;
+    }
+}
+footer .text p{
+    font-size: 15px !important;
+}
+footer .links li a {
+    display: flex;
+    padding:  8px 0;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+    transition: all .3s ease;
+
+}
+footer .links li a:hover{
+    color: #9f78ff;
+    transition: all .3s ease;
+}
+footer .copyright p{
+    text-align: center;
+    padding-left: 10px;
+}

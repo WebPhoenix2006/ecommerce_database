@@ -1,14 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~font-awesome/css/font-awesome.min.css';
 @import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~animate.css/animate.min.css';
+@import '/node_modules/bootstrap-icons/font/bootstrap-icons.min.css';
 /* @import '~ngx-owl-carousel-o/lib/styles/css/owl.carousel.css';
 @import '~ngx-owl-carousel-o/lib/styles/css/owl.theme.default.css'; */
-
+body, html{
+    overflow-x: hidden;
+}
 .container{
-    max-width: 1640px !important;
+    max-width: 1500px !important;
 }
 h1, h2, h3{
     font-family: 'Times New Roman', Times, serif !important;
+}
+ h5, h5, p, span{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .btn-primary{
     background-color: #9f78ff !important;
@@ -20,6 +27,11 @@ h1, h2, h3{
     justify-content: center;
     border-radius: 5px !important;
     padding: 20px 50px !important;
+}
+@media screen, (max-width: 720px) {
+    .btn-primary{
+        padding: 13px 18px !important;
+    }
 }
 .btn-outline-primary{
     color: #9f78ff;
